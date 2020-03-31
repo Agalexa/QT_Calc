@@ -1,0 +1,64 @@
+QT calc- 
+
+I really enjoyed this assignment as I felt like it really gave me a window into the full potential of an object-oriented programming langauge with the use of classes. I feel like I have a much better understanding of not only how classes work and are utilized but also why they are so effective. Classes are a way of not only organizining useable information in a certain way, but they also enable ease of use. And classes was also the hardest part of this assignment. Understanind the general syntax of class structure in python and how its functionality actually works was challenging for me. But I felt like it was very worthwhile. I think if I had to offer a piece of advice for someone starting this, I would say to make sure you understand classes and how they work before you proceed. 
+
+"PyQt is a Python binding for Qt, which is a set of C++ libraries and development tools that include platform-independent abstractions for Graphical User Interfaces (GUI)"
+
+Basic concepts of PyQT, mostly represented as Python classes
+    Widgets
+	- QWidget is the base class for all user interface objects or widgets
+	- "Widgets contain a series of attributes and methods that allow you to 		 
+            model their appearance and behavior."
+	- Buttons: initialized with QPushButton, a class that provides command 		 
+           button
+	- Labels: created with QLabel, gives you a way to display info
+	- Line edits: w/ QLineEdit, allows user to enter/edit data 
+	- Combo boxes: w/ QComboBox, drop down list - read only
+	- Radio button: w/ QRadioButton, option button that can be    
+           selected/unselected
+    Layout managers
+	- Classes that allow you to size and position widgets, auto adapt to resize 
+           events and context changes
+	- QHBoxLayout: arranges widgets horizontally
+	- QVBoxLayout: arranges vertically
+	- QGridLayout: arranges widgets into a  grid of rows/columns define widget 
+           position w/ pair of coords. #useful for calc.
+	- QFormLayout: arranges widgets in a two-column layout
+
+    Dialogs
+	-  A dialog window is always a top-level window that you can use as the 
+           main window for your Dialog-Style application.
+    Main windows
+	- QMainWindow, an instance of a class that derives from QMainWindow is 
+           considered to be a main window
+	- provides a framework for building app gui, class has its own built-in layout
+	- must have central widget, set with .setCentralWidget( )
+    Applications
+	- Most basic class is QApplication. Resides at the core of anu PyQT app
+	- Manages applications flow control as well as its main settings
+	- every PyQT gui must have one QApplication object
+    Event loops
+	- GUI apps are event-driven, meaning functions and methods are executed       
+           in response to user actions (clicking, selecting, entering... etc)
+	- user actions called events, commonly handled by an event loop also called 
+           a main loop. 
+	- infinite loop in which all events from the user, window sytem, and other 
+           sources are processed/dispatched. Event loop waits for an event to occur 
+           and then it dispatches it to perform a task. Continues until app term.
+	- in PyQT you can run app's event loop by calling .exec_( ) on QApplication 
+           object 
+	- for an event to trigger a response action, must connect event with the 
+           action to be executed
+    Signals and slots
+	- PyQT widgets act as event-catchers, every widget can catch a specific 
+           number of events (mouse clicks, keypress etc...) which is a message that 
+           signals a change in state       
+	- In response to an even, widgets always emit a signal which is a message 
+           that announces a change in its state
+	- signal does not perform action, to trigger action must be connected to a 
+           slot which is the function/method that will perform an action whenever the 
+           connecting signal is emitted. Any python callable can be used as a slot
+	- can modify connection to accept an argument ex. msg.setText(f'Hello 
+           {who}') now requires an argument called whoIn response to an even, 
+
+
